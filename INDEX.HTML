@@ -1,60 +1,106 @@
-<html> 
+<html>
     <head>
-         <title>
-             Gradients and images.
-         </title>
-         <style>
-            body{background-color: aquamarine;
-            background-image: url(download.jpg);
-        background-repeat: no-repeat;
-    background-position: top left;
-        background-size: cover;
-    background-attachment: fixed;}
-    div{
-        text-align: center;
-        height: 400px;
-        background-image: linear-gradient(to top right, red,blue,green,pink);
-        
-    }
-    #potato{
-        width: 100px;
-        height: 100px;
-        background-color: chartreuse;
-        animation-name: example;
-        animation-duration: 4s;
+        <title>
+            Positioning and opacity
+        </title>
+        <style>
+            body{
+                font-size: 35px;
+                background-color: crimson;
 
-    }
-    @keyframes example {
-        0% {
-            background-color: bisque;
-        }
-        25% {
-            background-color: aqua;
-        }
-        50% {
-            background-color: aquamarine;
-        }
-        75%{
-            background-color: cadetblue;
-        }
-        100% {
-            background-color: aliceblue;
-        }
-    }    
-            
-         </style>
+            }
+            .nothing{
+                background-color: blue;
+                border: 3px solid aquamarine;
+                right: 30px;
+                opacity: 0.999;
+
+            }   
+            .sticky{
+                background-color: #00c000;
+                position: sticky;
+                border: 6px solid chocolate;
+                top: 1px;
+                opacity: 0.7;
+
+            }
+            .relative{
+                background-color: #fca600;
+                position: relative;
+                left: 100px;
+                border: 9px solid lavenderblush;
+                opacity: 0.02;
+            }
+            .absolute{
+                background-color: purple;
+                border: 3px solid pink;
+                position: absolute;
+                left: 50px; 
+                opacity: 0.2;
+            }
+            .fixed{
+                position: fixed;
+                border: 4px solid palevioletred;
+                top: 1px;
+                opacity: 0.2;
+            }
+        </style>
     </head>
     <body>
-         <h1> 
-            Hello World.
-         </h1>
-         <header>
-            <div>
-                Welcome to CSS Styling.
+        <div class="nothing">
+            Division with no Positional property
+            <br>
+            <p>
+                0.1% chance to grow, replacing the normal variant.
+Chances can be increased by using Sprinklers.
+Can be applied by the Super Seed.
+Only works in crops and not produces.
+It can increase the produce's chances of being Rainbow.
+Can be applied by the Butterfly pet when a crop has 5+ environmental mutations.
+If the Butterfly applies Rainbow this way, all previous mutations will be removed.
+Using the Rainbow Fertilizer.
+Only works in crops and not produces.
+It can increase the produce's chances of being Rainbow.
+During Rainbow.
+            </p>
+        </div>
+        <div class="Sticky">
+        Division with Sticky Positional property
+        <br>
+        <p>
+            Sans appears as a relatively short and paunchy skeleton, with mitten-like hands. He has white dots for pupils in his black eye sockets that disappear when he is serious or angered. When Sans uses telekinesis, his left eye flashes light blue and yellow, the colors for patience and justice, and his right pupil vanishes. No matter the mood Sans is in, he is always seen with a wide, toothy-grin on his face. His clothes consists of a blue hoodie with a gray hood, a white t-shirt underneath, black shorts with white stripes on the sides, and a pair of slippers.
+        </p>
+        </div>
+        <div class="relative">
+            Division with relative Positional property
+            <br>
+            <p>
+                Shiny	32.15%	Provides an additional 15% boost to the pet's xp per second.
+Inverted	16.08%	Provides an additional 30% boost to the pet's xp per second.
+Windy	9.65%	Every 5-30m, 20-30% chance a nearby fruit becomes Windstruck!
+Frozen	9.65%	Every 4:55, 20.05% chance a nearby fruit becomes Frozen
+Golden	6.43%	Provides a big increase to the pet's passive.
+Tiny	6.43%	Pet is very tiny! Has 20% slower hunger rate. Gains 5-30 XP per second.
+Mega	6.43%	Pet is gigantic! Has 20% faster hunger rate. Gains 10-40 XP per second.
+IronSkin	3.22%	35-45% chance to recover stolen fruit!
+Radiant	3.22%	Every 30-20m, emits sunshine to advance a plant's growth by 24 hours!
+Shocked	3.22%	During a Thunderstorm: Every 60-45s, has a 25-30% chance to attract lightning, shocking nearby fruits!
+Rainbow	3.22%	Provides a bigger increase to the pet's passive!
+Ascended	0.32%	Every 360-300m, applies Dawnbound mutation to a fruit!
+            </p>
+            <div class="absolute">
+                Division with absolute Positional property
+                <p>
+                    The Mizuchi is a divine pet. It was supposed to initially release during the Zen Event and most likely hatched from the Corrupted Zen Egg, but came back and was released on the Seed Stages Event.
+                </p>
             </div>
-            <div id="potato">
-                JUST DO IT!!
-            </div>
-         </header>
+        </div>
+        <div class="fixed">
+           fixed Positional property
+           <br>
+           <p>
+            The Corrupted Zen Egg was a limited egg that was supposed to be added in the second half of the Zen Update, but was scrapped later before release.
+           </p>
+        </div>
     </body>
 </html>
