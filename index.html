@@ -1,26 +1,64 @@
 <html>
-     <head> 
+    <head>
         <title>
-            multimedia files in html... 
+            Bootstrap classes
         </title>
-         </head>
-         <body> 
-          <h1> 
-            Image Files:
-          </h1> 
-          <center> 
-           <img src="RobloxScreenShot20250824_203923860.png.png" alt="Picture loading. Ss of roblox GaG" width="1920" height="1080" >  
-          </center>
-          <h1>Audio and Video files: </h1>
-          <audio controls autoplay>
-            <source src="Voicy_Today you gonna die.mp3" type="audio/mpeg" > 
-            your browser doesent support this file pal.
-          </audio>
-          <video controls autoplay width="1920" height="1080" poster="RobloxScreenShot20250824_203923860.png.png" > 
-            <source src="tsb footage console.mp4" type="video/mp4" >
-            your browser doesnt support this file. so upgrade to opera gx.
-          </video>
-          <h1> Embedding with Iframes!!  </h1>
-          <iframe src="https://en.wikipedia.org/wiki/September_11_attacks" width="3840" height="2160"  > </iframe>
-         </body>
-     </html>
+        <style>
+            .col{
+                text-align: center;
+                border: 1px solid black;
+            }
+        </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <h1>
+            EQUAL WIDTH COLUMN WIDTH
+        </h1>
+        <div class="container">
+            <div class="row">
+                <div  class="col">
+                    col 1
+                </div>
+                <div class="col">
+                    col 2
+                </div>
+                <div class="col">
+                    col 3
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h1>
+                hello student
+            </h1>
+            <p>
+                Resize the browser with inspect element
+            </p>
+            <div class="row">
+                <div class="col-md-8 col-xs-4" style="background-color: aqua; border: 1px;" >
+                    xs
+                </div>
+                <div class="col-md-12 col-md-5" style="background-color: aquamarine;">
+                    xs-3
+                </div>
+                
+            </div>
+            <div class="row"> 
+                <div class="col-md-12 col-lg-6"  style="background-color: lightblue;">
+                    col-xs-6
+                </div>
+                <div class="col-xs-6 col-md-2" style="background-color: cyan;">
+                    col-xs-6
+                </div>
+            </div>
+            <div class="row" style="background-color: darkturquoise;">
+                <div class="col-xs-6" >
+                    col-xs-6
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
