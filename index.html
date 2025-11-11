@@ -1,23 +1,30 @@
 <html>
     <head>
         <title>
-            JAVA SCRIPT
-        </title>      
-          
+            Objects in Javascript
+        </title>
     </head>
     <body>
-        <button onclick="sans(5,3)">
-            execute function.lol
-        </button>
-        <script>
-            function sans (x,y){
-                if(y==undefined){
+        <h1>
+            Objects In Javascript
+        </h1>
+        <p>
+            There are two ways to add different properties: Access property by using .property and ["property"]
+        </p>
+        <p id="g666">
 
-                    y=2 
-                }               
-                 document.write(y*x)   
-                            
-            }
-        </script>
+        </p>
+        <script>
+            var car={name:"Suzuki Celerio",seater:4,size:"12.18 ft",color:"orange",wheelbase:"7.988845 ft"}
+            document.getElementById("g666").innerHTML="This car is" + car.name + "It IS a " + car["seater"] + "seater" + "it is " + car.color + "in color" + "It is " + car["size"] + "long" + "it has a wheel base of " + car.wheelbase
+            var s=Math.PI
+           document.write(s+"<br>")
+           var r=Math.round(54.93284928374092830917340723409723490)
+           document.write(r+"<br>")
+           var e=Math.trunc(90.0912830832080234802834027495034795039745904732507934)
+           document.write(e+"<br>")
+           var g=Math.pow(5,2)
+           document.write(g)
+         </script>
     </body>
 </html>
