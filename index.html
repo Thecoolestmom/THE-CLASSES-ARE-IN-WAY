@@ -1,30 +1,59 @@
 <html>
     <head>
         <title>
-            Objects in Javascript
+            Arrays and call stacks (64)
         </title>
     </head>
     <body>
         <h1>
-            Objects In Javascript
+            Arrays
         </h1>
         <p>
-            There are two ways to add different properties: Access property by using .property and ["property"]
+            Arrays are variables that can store more than 1 value!
+            You can access them through the index (not shiny)
+            The index of the first item will always be 0
         </p>
-        <p id="g666">
+        <p id="locally_existing">
+
+        </p>
+        <h1>
+            Array Methods 
+        </h1>
+        <p>
+           The Join method is when you take the values of two arrays and join them together it is join method
+           The Pop method is to remove the last value in a certain array.
+        </p>
+        <br>
+
+        <p id="locally_exist">
+
+        </p>
+        <p id="crossover">
+
+        </p>
+        <h1>
+            Stack
+        </h1>
+        <p>
+            its a Last in, first out type shi
+        </p>
+        <p id="murphys_law">
 
         </p>
         <script>
-            var car={name:"Suzuki Celerio",seater:4,size:"12.18 ft",color:"orange",wheelbase:"7.988845 ft"}
-            document.getElementById("g666").innerHTML="This car is" + car.name + "It IS a " + car["seater"] + "seater" + "it is " + car.color + "in color" + "It is " + car["size"] + "long" + "it has a wheel base of " + car.wheelbase
-            var s=Math.PI
-           document.write(s+"<br>")
-           var r=Math.round(54.93284928374092830917340723409723490)
-           document.write(r+"<br>")
-           var e=Math.trunc(90.0912830832080234802834027495034795039745904732507934)
-           document.write(e+"<br>")
-           var g=Math.pow(5,2)
-           document.write(g)
-         </script>
+            var fruits=["Mangos","tomatoes","pineapples","apples"]
+            document.getElementById("locally_existing").innerHTML=fruits[3]
+            var minecraft=["Dry hands","Wet Hands","Aria Math","Pigstep (technoblade never dies <3)"]
+            document.getElementById("locally_exist").innerHTML=fruits.join(minecraft)
+            fruits.pop()
+            document.getElementById("crossover").innerHTML=fruits
+            function add(a,b){
+                return a+b
+            }
+            function average(a,b){
+                return add(a,b) / 2
+            }
+            document.getElementById("murphys_law").innerHTML=average(95,67)
+        </script>
     </body>
 </html>
