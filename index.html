@@ -1,53 +1,77 @@
 <html>
     <head>
         <title>
-            Javascript
+            Search replace convert error handling and arrow function
         </title>
     </head>
     <body>
-        <h1 id="sparks">
-            Welcome
+        <h1>
+            Javascript String method
         </h1>
         <p>
-            A Black Flash in Jujutsu Kaisen is a special attack where the user's cursed energy flashes black, creating a distortion in space that multiplies the attack's power by \(2.5^{2}\), or \(6.25\). It occurs when a physical blow imbues a cursed energy strike within one-millionth of a second of impact, a feat requiring immense concentration and an intense mental state. Achieving a Black Flash allows the user to enter a "flow state" where manipulating cursed energy becomes instinctual and they can operate at their peak potential.  
+            String convert is used to convert numbers into strings
         </p>
+        <p>
+            Input Numbers
+        </p>
+        <p id="result">
+
+        </p>
+        <p id="string_result">
+
+        </p>
+        <hr>
         <h1>
-           Forsakened
+            Search and Replace
         </h1>
         <p>
-            In FORSAKEN lore, c00lkidd is the 10-year-old adopted son of 007n7, who is a Survivor in Forsaken. 007n7 adopted him after he was left at his door. After receiving the c00lgui from his adopted father—a life-changing mistake—he unleashed chaos throughout Roblox, especially in Work at a Pizza Place, then disappeared.
+            search function hely you to return index pos of the searched String
+            Replace function helps to replace one string to another string
         </p>
-        <p id="cars">
+        <p id="search_result">
 
         </p>
-        <button type="button" onclick="banana()">
-                click me
-        </button>   
+        <p id="replace_result">
+
+        </p>
+        <hr>
+        <h2>
+            Error handling
+        </h2>
+        <p>
+            This example shows how to use catch and display the error
+        </p>
+        <p id="err_message">
+
+        </p>
+        <hr>
         <h1>
-            Login
-
+            Add a function
         </h1>
-        <label>
-            Name
-        </label>
-        <input type="text" id="Name" placeholder="John Doe">
-            <label>
-                Email
-            </label>
-            <input type="text" id="Email" placeholder="johndoe@gmail.com">
-            <label>
-                Password
-            </label>
-            <input type="password" id="Password" placeholder="nil">
-            <button onclick="kkk()">
-                Login
-            </button>
-            <p id="message">
+        <p>
+            This example shows the arrow function with parameter
+        </p>
+        <p id="results">
 
-            </p>
-        <script src="script.js">
-    
-        </script>
-
+        </p>
+        <script>
+            var y=5
+            var g=4
+            document.getElementById("result").innerHTML=y+g
+            document.getElementById("string_result").innerHTML=String(y)+String(g)
+            var fruits="apple banana orange"
+            var rfruit=fruits.replace(/apple/,"pear")
+            var sfruit=fruits.search(/banana/)
+            document.getElementById("search_result").innerHTML=sfruit
+            document.getElementById("replace_result").innerHTML=rfruit
+            try{
+                addalert("Welcome guest")
+            }
+            catch(err){
+                document.getElementById("err_message").innerHTML=err.message
+            }
+            add=(a,b)=>a+b
+            document.getElementById("results").innerHTML=add(4,9)
+  </script>
     </body>
 </html>
