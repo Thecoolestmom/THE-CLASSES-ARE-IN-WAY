@@ -1,77 +1,87 @@
 <html>
     <head>
         <title>
-            Search replace convert error handling and arrow function
+            JS objects into JSON    
         </title>
     </head>
     <body>
         <h1>
-            Javascript String method
+            Convert JS objects to JSON
         </h1>
-        <p>
-            String convert is used to convert numbers into strings
-        </p>
-        <p>
-            Input Numbers
-        </p>
         <p id="result">
-
-        </p>
-        <p id="string_result">
-
-        </p>
-        <hr>
-        <h1>
-            Search and Replace
-        </h1>
-        <p>
-            search function hely you to return index pos of the searched String
-            Replace function helps to replace one string to another string
-        </p>
-        <p id="search_result">
-
-        </p>
-        <p id="replace_result">
 
         </p>
         <hr>
         <h2>
-            Error handling
+            Javascript Async and Await function
         </h2>
-        <p>
-            This example shows how to use catch and display the error
-        </p>
-        <p id="err_message">
+        <p id="kk">
 
         </p>
         <hr>
         <h1>
-            Add a function
+            Javascript Promises 
         </h1>
-        <p>
-            This example shows the arrow function with parameter
+        <p id="Corrupted">
+
         </p>
-        <p id="results">
+        <hr>
+        <h2>
+            Callback Functions 
+        </h2>
+        <p>
+           Do a calculation and display the result 
+        </p>
+        <p id="return_to_sender">
 
         </p>
         <script>
-            var y=5
-            var g=4
-            document.getElementById("result").innerHTML=y+g
-            document.getElementById("string_result").innerHTML=String(y)+String(g)
-            var fruits="apple banana orange"
-            var rfruit=fruits.replace(/apple/,"pear")
-            var sfruit=fruits.search(/banana/)
-            document.getElementById("search_result").innerHTML=sfruit
-            document.getElementById("replace_result").innerHTML=rfruit
-            try{
-                addalert("Welcome guest")
+            var myobj={
+                name:"Anashwar",Age:12,Grade:7
+
             }
-            catch(err){
-                document.getElementById("err_message").innerHTML=err.message
-            }
-            add=(a,b)=>a+b
-            document.getElementById("results").innerHTML=add(4,9)
-  </script>
+            var myjson=JSON.stringify(myobj)
+            var newobj=JSON.parse(myjson)
+            document.getElementById("result").innerHTML=newobj.Age
+             async function add(a,b) {
+                let hehe=await a+b
+                display(hehe)
+             }
+             function display(msg) {
+                document.getElementById("kk").innerHTML=msg
+             }
+             function mydisplayer
+             (reflection) {add (5,89234737)
+                document.getElementById("Corrupted").innerHTML=reflection
+             }
+             function sum(a,b) {
+                var sum=a+b
+                mydisplayer(sum)
+             }
+             let mypromise=new Promise(function (myresult,myreject) {
+                let x=0 
+                if (x==0) {
+                    myresult("ok")
+                } else {
+                    myreject("error 7n7")
+                }
+             })
+                mypromise.then(
+                    function (value){
+                        sum(5,5)
+                    },
+                    function (error){
+                        sum(error)
+                    }
+                )
+                function mydisplayer(value){
+                    document.getElementById("return_to_sender").innerHTML=value
+                }
+                function mycalc(n1,n2,mycallback) {
+                    let sum=n1+n2
+                    mycallback(sum)
+                }
+                mycalc(5,5,mydisplayer)
+        </script>
     </body>
 </html>
