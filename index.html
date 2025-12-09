@@ -1,87 +1,36 @@
 <html>
     <head>
         <title>
-            JS objects into JSON    
+            Area Calculator
         </title>
     </head>
     <body>
-        <h1>
-            Convert JS objects to JSON
-        </h1>
-        <p id="result">
-
-        </p>
-        <hr>
-        <h2>
-            Javascript Async and Await function
-        </h2>
-        <p id="kk">
-
-        </p>
-        <hr>
-        <h1>
-            Javascript Promises 
-        </h1>
-        <p id="Corrupted">
-
-        </p>
-        <hr>
-        <h2>
-            Callback Functions 
-        </h2>
-        <p>
-           Do a calculation and display the result 
-        </p>
-        <p id="return_to_sender">
-
-        </p>
+    
         <script>
-            var myobj={
-                name:"Anashwar",Age:12,Grade:7
-
-            }
-            var myjson=JSON.stringify(myobj)
-            var newobj=JSON.parse(myjson)
-            document.getElementById("result").innerHTML=newobj.Age
-             async function add(a,b) {
-                let hehe=await a+b
-                display(hehe)
-             }
-             function display(msg) {
-                document.getElementById("kk").innerHTML=msg
-             }
-             function mydisplayer
-             (reflection) {add (5,89234737)
-                document.getElementById("Corrupted").innerHTML=reflection
-             }
-             function sum(a,b) {
-                var sum=a+b
-                mydisplayer(sum)
-             }
-             let mypromise=new Promise(function (myresult,myreject) {
-                let x=0 
-                if (x==0) {
-                    myresult("ok")
-                } else {
-                    myreject("error 7n7")
-                }
-             })
-                mypromise.then(
-                    function (value){
-                        sum(5,5)
-                    },
-                    function (error){
-                        sum(error)
-                    }
-                )
-                function mydisplayer(value){
-                    document.getElementById("return_to_sender").innerHTML=value
-                }
-                function mycalc(n1,n2,mycallback) {
-                    let sum=n1+n2
-                    mycallback(sum)
-                }
-                mycalc(5,5,mydisplayer)
-        </script>
+        var choice=prompt("Welcome to area calculator\nEnter your choice\n1.Area of rectangle \n 2.Area of triangle\n 3.Area of circle\n 4.Area of square ")
+        if (choice=="1") {
+            var l=prompt("Enter the length")
+            var b=prompt("Enter the breadth")
+            var result=Number(l)*Number(b)
+            alert("The area is " + result)
+        }
+        if (choice=="2") {
+            var base=prompt("Enter the base")
+            var height=prompt("ENter the height")
+            var result=Number(base)*Number(height)/2
+             alert("The area is " + result)
+        }
+        if (choice=="3") {
+            var radius=prompt("Enter the radius")
+            var result=3.14*Number(radius)*Number(radius)
+             alert("The area is " + result)
+        }
+        if (choice==4) {
+            var side=prompt("enter the length of one side")
+            var result=Number(side)*Number(side)
+            alert("The area is " + result)
+        }
+        </script>    
+        
     </body>
 </html>
