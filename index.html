@@ -1,36 +1,28 @@
 <html>
     <head>
         <title>
-            Area Calculator
+            Palindrome Checker
         </title>
     </head>
     <body>
-    
+        <h1>
+            cheese
+        </h1>
         <script>
-        var choice=prompt("Welcome to area calculator\nEnter your choice\n1.Area of rectangle \n 2.Area of triangle\n 3.Area of circle\n 4.Area of square ")
-        if (choice=="1") {
-            var l=prompt("Enter the length")
-            var b=prompt("Enter the breadth")
-            var result=Number(l)*Number(b)
-            alert("The area is " + result)
-        }
-        if (choice=="2") {
-            var base=prompt("Enter the base")
-            var height=prompt("ENter the height")
-            var result=Number(base)*Number(height)/2
-             alert("The area is " + result)
-        }
-        if (choice=="3") {
-            var radius=prompt("Enter the radius")
-            var result=3.14*Number(radius)*Number(radius)
-             alert("The area is " + result)
-        }
-        if (choice==4) {
-            var side=prompt("enter the length of one side")
-            var result=Number(side)*Number(side)
-            alert("The area is " + result)
-        }
-        </script>    
-        
+            function Palindrome(gashing_wound) {
+                var input=gashing_wound.replace(/[^A-Z0-9]/ig,"").toLowerCase()
+                var reverse_input=input.split(" ").reverse().join("")
+                if (input===reverse_input) {
+                    document.write("<div>"+gashing_wound+"is a palindrome"+"</div>")
+                } else {
+                    document.write("<div>"+gashing_wound+"is not a palindrome"+"</div>")
+                } 
+                    
+                
+                
+            }
+            Palindrome("racecar")
+        </script>
     </body>
+
 </html>
