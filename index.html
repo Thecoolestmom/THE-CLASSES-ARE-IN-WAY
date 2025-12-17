@@ -1,28 +1,47 @@
 <html>
     <head>
         <title>
-            Palindrome Checker
+            To do list app
         </title>
     </head>
     <body>
         <h1>
-            cheese
+            To Do list
         </h1>
-        <script>
-            function Palindrome(gashing_wound) {
-                var input=gashing_wound.replace(/[^A-Z0-9]/ig,"").toLowerCase()
-                var reverse_input=input.split(" ").reverse().join("")
-                if (input===reverse_input) {
-                    document.write("<div>"+gashing_wound+"is a palindrome"+"</div>")
-                } else {
-                    document.write("<div>"+gashing_wound+"is not a palindrome"+"</div>")
-                } 
-                    
-                
-                
-            }
-            Palindrome("racecar")
-        </script>
-    </body>
+        <form id="jason">
+         <input type="text" id="ligma">
+         <button>
+            Add
+         </button>
+        </form>
+       <h3>
+        To Do List
+       </h3> 
+       <ul id="guest">
 
+       </ul>
+       <script>
+        var mrhim=document.getElementById("jason")
+        var input= document.getElementById("ligma")
+        var list=document.getElementById("guest")
+
+            mrhim.addEventListener("submit",function(event){
+                event.preventDefault()
+                createitem(input.value)
+            }
+             
+            
+            )
+            function createitem(inputItems) {
+                var item=`<li>${inputItems}<button onclick="cheese(this)">Delete</button></li>`
+                list.insertAdjacentHTML("beforeend",item)
+                
+                input.value("")
+                input.focus()
+            }
+            function cheese(DeleteItem){
+                DeleteItem.parentElement.remove()
+            }
+       </script>
+    </body>
 </html>
