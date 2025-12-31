@@ -1,47 +1,82 @@
 <html>
     <head>
         <title>
-            To do list app
+            Stopwatch in JS
         </title>
     </head>
     <body>
         <h1>
-            To Do list
+            STOPWATCH!!!!1!!
         </h1>
-        <form id="jason">
-         <input type="text" id="ligma">
-         <button>
-            Add
-         </button>
-        </form>
-       <h3>
-        To Do List
-       </h3> 
-       <ul id="guest">
-
-       </ul>
-       <script>
-        var mrhim=document.getElementById("jason")
-        var input= document.getElementById("ligma")
-        var list=document.getElementById("guest")
-
-            mrhim.addEventListener("submit",function(event){
-                event.preventDefault()
-                createitem(input.value)
-            }
-             
+<p>
+        <span id="seconds">
+            00
+        </span>
+        :
+        <Span id="millisecs">
+                00
+        </Span>
+        
+</p>
+        <button id="start">
+        Start    
+        </button>
+        <button id="stop">
+            Stop
+        </button>
+        <button id="reset">
+            reset
+        </button>
+        <script>
+            window.onload=function(){
+                var seconds=0
+                var millisecs=0
+                var upmillisecs=document.getElementById("millisecs")
+                var upsecs=document.getElementById("seconds")
+                var buttonstart=document.getElementById("start")
+                var buttonstop=document.getElementById("stop")
+                var buttonreset=document.getElementById("reset")
+                var interval
             
-            )
-            function createitem(inputItems) {
-                var item=`<li>${inputItems}<button onclick="cheese(this)">Delete</button></li>`
-                list.insertAdjacentHTML("beforeend",item)
+            
+            buttonstart.onclick=function(){
+                clearInterval(interval)
+                interval=setInterval(starttimer,10)
+            }
+             buttonstop.onclick=function(){
+                clearInterval(interval)
                 
-                input.value("")
-                input.focus()
+            } 
+            buttonreset.onclick=function(){
+                clearInterval(interval)
+                seconds="00"
+                millisecs="00"
+                upmillisecs.innerHTML=millisecs
+                upsecs.innerHTML=seconds
+            } 
+            function starttimer() {
+                millisecs++
+                if (millisecs<=9) {
+                     upmillisecs.innerHTML="0"+millisecs
+                }
+                if (millisecs>9) {
+                    upmillisecs.innerHTML=millisecs
+
+                }
+                if (millisecs>99) {
+                    seconds++
+                    upsecs.innerHTML="0"+seconds
+                    millisecs=0
+                    upmillisecs.innerHTML="0"+"0"
+
+                }
+                if (seconds>9) {
+                    upsecs.innerHTML=seconds
+                }
+
+
             }
-            function cheese(DeleteItem){
-                DeleteItem.parentElement.remove()
-            }
-       </script>
+        }      
+        </script>
     </body>
 </html>
