@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>
+            slider
+        </title>
+    </head>
+    <body>
+        <section >
+            <img src="715sbMLrG5L._SX679_.jpg" alt="gaming laptop" class="gaming_laptop" style="height: 500px;">
+            <img src="download.jpg" alt="hacks!!" class="gaming_laptop" style="height: 500px;">
+            <img src="images.jpg " alt="robux" class="gaming_laptop" style="height: 500px;">
+
+
+        </section>
+        <script>
+            var myindex=0
+            slider()
+            function slider() {
+                var i=0
+                var x=document.getElementsByClassName("gaming_laptop")
+                for ( i = 0; i < x.length; i++) {
+                    x[i].style.display="none"
+                    
+                }
+                myindex++
+                if (myindex>x.length) {
+                    myindex=1
+                }
+                x[myindex-1].style.display="block"
+                setTimeout(slider,3000)
+            }
+        </script>
+    </body>
+</html>
