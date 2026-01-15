@@ -1,53 +1,58 @@
-<!DOCTYPE html>
 <html>
     <head>
         <title>
-            Gambling with dice
+            capstone project III
         </title>
         <style>
-            body{
-                font-family: Arial, Helvetica, sans-serif;
-                text-align: center;
+           .class{
+            position: relative; 
+            opacity: 0.70;
+            background-color: greenyellow;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
 
-            }
-            #dice{
-                font-size: 350px;
-                
-            }
-            #dice:hover{
-                cursor: pointer;
-            
-            }
+        } 
+        .class2{
+            background-image: url("download.jpg");
+            min-height: 100%;
+            min-width: 100%;
+        }
+        .section{
+            text-align: center;
+            padding: 50px 80px;
+
+        }
+        .section-light{
+            background-color: wheat;
+            color: white;
+        }
         </style>
     </head>
     <body>
-       <div>Click on the dice...</div>
-       <div id="dice" onclick="gamblecore()"></div>
-    </body>
-    <script>
-        var dice
-        var dices=['&#9856;','&#9857;','&#9858;','&#9859;','&#9860;','&#9861;']
-        var stopped=true
-        var letsgogambling
-        function chain() {
-            var random=Math.floor(Math.random()*6)
-            dice.innerHTML=dices[random]
+        <span class="border trans" style="font-size: 40px;">
+            <centre>Welcome all to this website</centre>
 
-            
-        }
-        function gamblecore() {
-            if (stopped) {
-                stopped=false
-                letsgogambling=setInterval(chain,100)
-            } else {
-                clearInterval(letsgogambling)
-                stopped=true
-            }
-            
-        }
-        window.onload=function () {
-            dice=document.getElementById("dice")
-            gamblecore()
-        }
-    </script>
+        </span>
+        <br>
+        <section class="section section-dark">
+            <h1>
+                Section - 1
+            </h1>
+            <p>
+                Web development is goated and will grow your pea sized brain (trust)
+                ye it works
+            </p>
+
+        </section>
+        <div class="class">
+            <div class="class2">
+                <span class="border trans" style="font-size: large;">
+                    image to text
+                    
+
+                </span>
+            </div>
+        </div>
+    </body>
 </html>
